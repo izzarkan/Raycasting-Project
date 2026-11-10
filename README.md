@@ -6,9 +6,9 @@ This is a personal project for me to learn C, SDL3, and math simultaniously.
 
 1. C23
 2. SDL3
-3. CMake
+3. ~~CMake~~
 
-## How does it work
+## How it works
 
 The renderer is a software raycaster (Wolfenstein 3D style). Nothing is drawn on the GPU: every frame is written pixel by pixel into an ARGB8888 buffer, which is uploaded to an SDL streaming texture and presented.
 
@@ -25,6 +25,7 @@ The renderer is a software raycaster (Wolfenstein 3D style). Nothing is drawn on
 5. **Textures**: generated procedurally at startup (brick, stone, tech panel), so there are no asset files.
 6. **Minimap**: a 2D overlay of the map, the player, and the facing direction.
 7. **Main loop** (`src/main.c`): SDL3 setup, input, a nanosecond delta-time so movement speed is independent of frame rate, and cleanup.
+8. **Mouse look** (`src/main.c`): the window uses SDL's relative mouse mode, so the cursor is hidden and captured. Each `SDL_EVENT_MOUSE_MOTION` event's horizontal movement (`xrel`) is multiplied by a sensitivity (0.003 rad/px) and passed to `player_rotate()`, the same function the keyboard rotation uses. Press `L` to toggle it off and on.
 
 ### Controls
 
@@ -33,6 +34,7 @@ The renderer is a software raycaster (Wolfenstein 3D style). Nothing is drawn on
 | `W` / `S` | Move forward / backward |
 | `A` / `D` | Strafe left / right |
 | `[` / `]` or Left / Right arrows | Rotate |
+| `L` | To toggle from mouse look or keyboard look |
 
 ## Building
 
@@ -58,4 +60,4 @@ Then run `./main.exe`. If the build fails, make sure `main.exe` isn't still runn
 
 ## Todo
 
-- [ ] Mouse look
+- [X] Mouse look

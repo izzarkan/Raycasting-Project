@@ -7,3 +7,4 @@ typedef struct {
 } Player;
 
 void player_update(Player* p, double dt);
+void player_rotate(Player* p, double angle);

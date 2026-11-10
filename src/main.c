@@ -41,6 +41,10 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[]) {
     bool running = true;
     SDL_Event event;
 
+    // SDL_SetWindowRelativeMouseMode(window, true);
+    bool mouse_look = true;
+    SDL_SetWindowRelativeMouseMode(window, mouse_look);
+
     while (running) {
         uint64_t current_ticks = SDL_GetTicksNS();
         double dt = (double)(current_ticks - last_ticks) / 1e9;
@@ -50,8 +54,16 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[]) {
         while (SDL_PollEvent(&event)) {
             if (event.type == SDL_EVENT_QUIT) running = false;
             if (event.type == SDL_EVENT_KEY_DOWN && event.key.key == SDLK_ESCAPE) running = false;
+            if (mouse_look && event.type == SDL_EVENT_MOUSE_MOTION) {
+                constexpr double mouse_sensitivity = 0.003; // In rad/px
+                player_rotate(&player, event.motion.xrel * mouse_sensitivity);
+            }
+            if (event.type == SDL_EVENT_KEY_DOWN && event.key.key == SDLK_L && !event.key.repeat) {
+                mouse_look = !mouse_look;
+                SDL_SetWindowRelativeMouseMode(window, mouse_look);
+            }
         }
-        
+
         player_update(&player, dt);
         render_draw_scene(pixels, &player, textures);
 

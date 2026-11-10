@@ -40,17 +40,17 @@ void player_update(Player* p, double dt) {
     double angle = 0.0;
     if (keys[SDL_SCANCODE_LEFTBRACKET]  || keys[SDL_SCANCODE_LEFT])  angle = -rot_step;
     if (keys[SDL_SCANCODE_RIGHTBRACKET] || keys[SDL_SCANCODE_RIGHT]) angle =  rot_step;
+    if (angle != 0.0) player_rotate(p, angle);
+}
 
-    if (angle != 0.0) {
-        double cos_a = cos(angle);
-        double sin_a = sin(angle);
+void player_rotate(Player* p, double angle) {
+    double cos_a = cos(angle), sin_a = sin(angle);
 
-        double old_dir_x = p->dir_x;
-        p->dir_x = p->dir_x * cos_a - p->dir_y * sin_a;
-        p->dir_y = old_dir_x * sin_a + p->dir_y * cos_a;
+    double old_dir_x = p->dir_x;
+    p->dir_x = p->dir_x * cos_a - p->dir_y * sin_a;
+    p->dir_y = old_dir_x * sin_a + p->dir_y * cos_a;
 
-        double old_plane_x = p->plane_x;
-        p->plane_x = p->plane_x * cos_a - p->plane_y * sin_a;
-        p->plane_y = old_plane_x * sin_a + p->plane_y * cos_a;
-    }
+    double old_plane_x = p->plane_x;
+    p->plane_x = p->plane_x * cos_a - p->plane_y * sin_a;
+    p->plane_y = old_plane_x * sin_a + p->plane_y * cos_a;
 }
