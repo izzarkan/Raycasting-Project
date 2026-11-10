@@ -1,0 +1,3 @@
+C:/Playground/SDL3/Raycasting/build/CMakeFiles/raycaster.dir
+C:/Playground/SDL3/Raycasting/build/CMakeFiles/edit_cache.dir
+C:/Playground/SDL3/Raycasting/build/CMakeFiles/rebuild_cache.dir

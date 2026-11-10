@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Playground/SDL3/Raycasting/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -1,0 +1,26 @@
+[
+{
+  "directory": "C:/Playground/SDL3/Raycasting/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe   -g -std=gnu2x -o CMakeFiles\\raycaster.dir\\src\\main.c.obj -c C:\\Playground\\SDL3\\Raycasting\\src\\main.c",
+  "file": "C:/Playground/SDL3/Raycasting/src/main.c",
+  "output": "CMakeFiles/raycaster.dir/src/main.c.obj"
+},
+{
+  "directory": "C:/Playground/SDL3/Raycasting/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe   -g -std=gnu2x -o CMakeFiles\\raycaster.dir\\src\\map.c.obj -c C:\\Playground\\SDL3\\Raycasting\\src\\map.c",
+  "file": "C:/Playground/SDL3/Raycasting/src/map.c",
+  "output": "CMakeFiles/raycaster.dir/src/map.c.obj"
+},
+{
+  "directory": "C:/Playground/SDL3/Raycasting/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe   -g -std=gnu2x -o CMakeFiles\\raycaster.dir\\src\\player.c.obj -c C:\\Playground\\SDL3\\Raycasting\\src\\player.c",
+  "file": "C:/Playground/SDL3/Raycasting/src/player.c",
+  "output": "CMakeFiles/raycaster.dir/src/player.c.obj"
+},
+{
+  "directory": "C:/Playground/SDL3/Raycasting/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe   -g -std=gnu2x -o CMakeFiles\\raycaster.dir\\src\\renderer.c.obj -c C:\\Playground\\SDL3\\Raycasting\\src\\renderer.c",
+  "file": "C:/Playground/SDL3/Raycasting/src/renderer.c",
+  "output": "CMakeFiles/raycaster.dir/src/renderer.c.obj"
+}
+]
