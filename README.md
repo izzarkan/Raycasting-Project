@@ -1,6 +1,6 @@
 # Raycasting project
 
-This is a personal project for me to learn C, SDL3, and math simultaniously.
+This is a personal project for me to learn C, SDL3, and math simultaneously.
 
 ## Tech stack
 
