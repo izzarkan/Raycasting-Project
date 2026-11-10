@@ -20,13 +20,6 @@ void render_generate_textures(uint32_t textures[NUM_TEXTURES][TEX_SIZE * TEX_SIZ
             textures[1][idx] = border
                 ? 0xFF2C3E50
                 : (0xFF000000 | ((stone - 20) << 16) | ((stone + 20) << 8) | stone);
-
-            // Texture 2: Blue Tech Panel
-            bool grid = (x % 16 == 0 || y % 16 == 0);
-            bool core = (x > 20 && x < 44 && y > 20 && y < 44);
-            if (grid)      textures[2][idx] = 0xFF1A252F;
-            else if (core) textures[2][idx] = 0xFF3498DB;
-            else           textures[2][idx] = 0xFF243B55;
         }
     }
 }
